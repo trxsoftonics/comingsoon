@@ -53,7 +53,14 @@ html {
 html,
 body {
   height: 100%;  /* prevent horizontal scrolling */
-  overflow: hidden;
+  overflow-x: hidden;  /* only hide horizontal overflow */
+  overflow-y: auto;    /* enable vertical scrolling */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;  /* WebKit-based browsers */
 }
 
 body {
